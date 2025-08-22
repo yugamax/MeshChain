@@ -7,9 +7,6 @@ from ml_service.utils import load_model, load_json
 
 app = FastAPI(title="Smart Mesh ML API", version="0.1.0")
 
-# =============================
-# Load models at startup
-# =============================
 try:
     link_model = load_model("link_quality.pkl")
     link_features = load_json("link_quality_features.json")["order"]
@@ -45,9 +42,6 @@ except Exception as e:
     sos_model = None
 
 
-# =============================
-# Request Schemas
-# =============================
 class LinkSample(BaseModel):
     rssi: float
     ping_ms: float
@@ -85,9 +79,6 @@ class SOSRequest(BaseModel):
     text: str
 
 
-# =============================
-# Endpoints
-# =============================
 @app.get("/health")
 def health():
     global link_model, demand_model, anomaly_model, sos_model
