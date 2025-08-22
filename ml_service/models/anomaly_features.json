@@ -1,0 +1,11 @@
+{
+  "order": [
+    "bytes_shared_mb",
+    "session_minutes",
+    "peers_connected",
+    "avg_speed_mbps",
+    "variance_speed",
+    "claimed_tokens",
+    "location_change_km"
+  ]
+}

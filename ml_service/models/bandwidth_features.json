@@ -1,0 +1,8 @@
+{
+  "order": [
+    "hour_of_day",
+    "day_of_week",
+    "last_hour_mb",
+    "avg_6h_mb"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "order": [
+    "rssi",
+    "ping_ms",
+    "jitter_ms",
+    "throughput_mbps",
+    "battery_pct",
+    "hops",
+    "mobility",
+    "congestion",
+    "packet_loss_pct"
+  ]
+}
