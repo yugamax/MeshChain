@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import List
 import numpy as np
 
-from ml_service.utils import load_model, load_json
+from utils import load_model, load_json
 
 app = FastAPI(title="Smart Mesh ML API", version="0.1.0")
 
