@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import numpy as np
@@ -6,6 +7,15 @@ import numpy as np
 from utils import load_model, load_json
 
 app = FastAPI(title="Smart Mesh ML API", version="0.1.0")
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 try:
     link_model = load_model("link_quality.pkl")
